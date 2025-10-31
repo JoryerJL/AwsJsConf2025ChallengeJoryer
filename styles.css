@@ -213,17 +213,7 @@ input:focus, textarea:focus, select:focus {
     pointer-events: none;
 }
 
-.header::after {
-    content: '🌼 💀 🕯️';
-    position: absolute;
-    top: 90px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 1.2rem;
-    opacity: 0.2;
-    animation: decorativeFloat 6s ease-in-out infinite;
-    pointer-events: none;
-}
+/* Removed floating header emojis */
 
 @keyframes decorativeFloat {
     0%, 100% { transform: translateX(-50%) translateY(0px); }
@@ -248,25 +238,7 @@ input:focus, textarea:focus, select:focus {
     position: relative;
 }
 
-.main-title::before {
-    content: '🌺';
-    position: absolute;
-    left: -2.5rem;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 1.8rem;
-    animation: rotate 4s linear infinite;
-}
-
-.main-title::after {
-    content: '🌺';
-    position: absolute;
-    right: -2.5rem;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 1.8rem;
-    animation: rotate 4s linear infinite reverse;
-}
+/* Removed rotating title emojis */
 
 @keyframes rotate {
     from { transform: translateY(-50%) rotate(0deg); }
@@ -404,23 +376,7 @@ input:focus, textarea:focus, select:focus {
     transition: var(--transition-normal);
 }
 
-.nav-list::before {
-    content: '🌼';
-    position: absolute;
-    left: -2rem;
-    font-size: 1.2rem;
-    animation: float 3s ease-in-out infinite;
-    opacity: 0.6;
-}
-
-.nav-list::after {
-    content: '💀';
-    position: absolute;
-    right: -2rem;
-    font-size: 1.2rem;
-    animation: float 3s ease-in-out infinite reverse;
-    opacity: 0.6;
-}
+/* Removed navigation floating emojis */
 
 @keyframes float {
     0%, 100% { transform: translateY(0px); }
@@ -637,13 +593,12 @@ input:focus, textarea:focus, select:focus {
 }
 
 .ofrenda-section::after {
-    content: '🕯️ 🌺';
+    content: '🕯️';
     position: absolute;
     top: var(--spacing-lg);
     right: var(--spacing-lg);
-    font-size: 1.5rem;
-    opacity: 0.15;
-    animation: decorativeFloat 8s ease-in-out infinite;
+    font-size: 1.2rem;
+    opacity: 0.1;
     pointer-events: none;
 }
 
@@ -653,13 +608,12 @@ input:focus, textarea:focus, select:focus {
 }
 
 .cempasuchil-section::after {
-    content: '🌼 🌻';
+    content: '🌼';
     position: absolute;
     bottom: var(--spacing-lg);
     left: var(--spacing-lg);
-    font-size: 1.5rem;
-    opacity: 0.15;
-    animation: decorativeFloat 8s ease-in-out infinite reverse;
+    font-size: 1.2rem;
+    opacity: 0.1;
     pointer-events: none;
 }
 
@@ -669,13 +623,12 @@ input:focus, textarea:focus, select:focus {
 }
 
 .calaveras-section::after {
-    content: '💀 🎨';
+    content: '💀';
     position: absolute;
     top: var(--spacing-lg);
     left: var(--spacing-lg);
-    font-size: 1.5rem;
-    opacity: 0.15;
-    animation: decorativeFloat 8s ease-in-out infinite;
+    font-size: 1.2rem;
+    opacity: 0.1;
     pointer-events: none;
 }
 
@@ -686,13 +639,12 @@ input:focus, textarea:focus, select:focus {
 }
 
 .quiz-section::after {
-    content: '🎯 🏆';
+    content: '🎯';
     position: absolute;
     bottom: var(--spacing-lg);
     right: var(--spacing-lg);
-    font-size: 1.5rem;
-    opacity: 0.15;
-    animation: decorativeFloat 8s ease-in-out infinite reverse;
+    font-size: 1.2rem;
+    opacity: 0.1;
     pointer-events: none;
 }
 
@@ -711,20 +663,7 @@ input:focus, textarea:focus, select:focus {
     border-right: 5px solid var(--color-primary-purple);
 }
 
-/* Decorative section dividers */
-.content-section + .content-section::before {
-    content: '🌺 💀 🌺';
-    position: absolute;
-    top: -20px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: var(--color-text-light);
-    padding: var(--spacing-xs) var(--spacing-sm);
-    border-radius: var(--border-radius-lg);
-    font-size: 1.5rem;
-    box-shadow: var(--shadow-medium);
-    z-index: 3;
-}
+/* Removed section divider emojis */
 
 /* Footer Styles */
 .footer {
@@ -1023,12 +962,8 @@ input:focus, textarea:focus, select:focus {
     .cempasuchil-section::after,
     .calaveras-section::after,
     .quiz-section::after {
-        font-size: 1.5rem;
-        top: var(--spacing-sm);
-        right: var(--spacing-sm);
-        left: auto;
-        bottom: auto;
-        opacity: 0.1;
+        font-size: 1rem;
+        opacity: 0.08;
     }
 }
 
@@ -1180,25 +1115,13 @@ input:focus, textarea:focus, select:focus {
         border-radius: var(--border-radius-md);
     }
     
-    /* Enhanced decorative elements for desktop */
-    .main-title::before,
-    .main-title::after {
-        display: block;
-    }
-    
-    .nav-list::before,
-    .nav-list::after {
-        display: block;
-    }
-    
-    /* Restore decorative elements with better positioning */
+    /* Simplified decorative elements for desktop */
     .ofrenda-section::after,
     .cempasuchil-section::after,
     .calaveras-section::after,
     .quiz-section::after {
-        font-size: 2rem;
-        opacity: 0.2;
-        animation-duration: 8s;
+        font-size: 1.3rem;
+        opacity: 0.12;
     }
     
     /* Enhanced alternating layouts */
@@ -1309,14 +1232,13 @@ input:focus, textarea:focus, select:focus {
         margin: 0 var(--spacing-sm);
     }
     
-    /* Full decorative elements on large screens */
+    /* Subtle decorative elements on large screens */
     .ofrenda-section::after,
     .cempasuchil-section::after,
     .calaveras-section::after,
     .quiz-section::after {
-        font-size: 2.5rem;
-        opacity: 0.3;
-        animation-duration: 10s;
+        font-size: 1.4rem;
+        opacity: 0.15;
     }
     
     /* Enhanced section layouts for large screens */
@@ -1390,13 +1312,13 @@ Ultra-wide Desktop Devices (1920px+) */
         padding: 2rem;
     }
     
-    /* Enhanced decorative elements for ultra-wide */
+    /* Minimal decorative elements for ultra-wide */
     .ofrenda-section::after,
     .cempasuchil-section::after,
     .calaveras-section::after,
     .quiz-section::after {
-        font-size: 3rem;
-        opacity: 0.4;
+        font-size: 1.5rem;
+        opacity: 0.18;
     }
 }
 
@@ -2099,17 +2021,7 @@ estion text transitions */
 
 /* Enhanced decorative elements with candle effects - removed duplicate */
 
-/* Add candle flickering to existing decorative elements */
-.ofrenda-section::after {
-    content: '🕯️ 📸 🍞 🌺';
-    position: absolute;
-    top: var(--spacing-lg);
-    right: var(--spacing-lg);
-    font-size: 2rem;
-    opacity: 0.2;
-    animation: decorativeFloat 6s ease-in-out infinite, candleFlicker 3s ease-in-out infinite;
-    pointer-events: none;
-}
+/* Removed duplicate decorative elements */
 
 /* Interactive element glow effects */
 .section-img:hover {
@@ -2300,13 +2212,6 @@ estion text transitions */
     .progress-fill::after,
     .quiz-container::before,
     .quiz-section::before,
-    .header::after,
-    .ofrenda-section::after,
-    .cempasuchil-section::after,
-    .calaveras-section::after,
-    .quiz-section::after,
-    .main-title::before,
-    .main-title::after,
     .nav-link.active,
     .section-title::after {
         animation: none !important;
