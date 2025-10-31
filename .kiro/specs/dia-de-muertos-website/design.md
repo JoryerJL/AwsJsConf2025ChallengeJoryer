@@ -48,6 +48,7 @@ Each section follows a consistent layout pattern:
 - **Answer Buttons**: Interactive selection with visual feedback
 - **Results Display**: Score calculation and celebratory message
 - **Reset Functionality**: Option to retake quiz
+- **Simplified Experience**: Removed share functionality to focus on learning
 
 ## Data Models
 
@@ -109,6 +110,14 @@ const sections = [
 - **Skull Motifs**: SVG icons as section dividers
 - **Candle Animations**: Subtle flickering effects with CSS keyframes
 - **Paper Texture**: Background overlay for authentic feel
+
+### Visual Enhancements and Animations
+- **Entrance Animations**: Sections fade in as user scrolls using Intersection Observer
+- **Hover Effects**: Interactive elements have subtle lift and glow effects
+- **Candle Flickering**: Realistic flame animation with scale, rotation, and brightness changes
+- **Controlled Decorative Elements**: Reduced emoji count and opacity for better visual balance
+- **Fixed Navigation Spacing**: Proper header padding to prevent navigation overlap
+- **Ripple Effects**: Button clicks create expanding ripple animations for tactile feedback
 
 ## Responsive Design Strategy
 
