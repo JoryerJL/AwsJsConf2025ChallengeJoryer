@@ -54,6 +54,9 @@
                     <li class="nav-item">
                         <a href="#quiz" class="nav-link">Quiz</a>
                     </li>
+                    <li class="nav-item">
+                        <a href="#ranking" class="nav-link">Ranking</a>
+                    </li>
                 </ul>
             </div>
         </nav>
@@ -124,7 +127,25 @@
                         <!-- Quiz Start Screen -->
                         <div id="quiz-start" class="quiz-start">
                             <p class="quiz-intro">Demuestra cuánto sabes sobre las tradiciones del Día de Muertos</p>
-                            <button id="start-quiz-btn" class="quiz-btn quiz-btn-primary">Comenzar Quiz</button>
+                            
+                            <!-- Best Score Display -->
+                            <div id="best-score-section" class="best-score-section" style="display: none;">
+                                <div class="best-score-card">
+                                    <h4 class="best-score-title">🏆 Mejor Puntuación</h4>
+                                    <div class="best-score-info">
+                                        <div class="best-score-name" id="best-score-name">-</div>
+                                        <div class="best-score-details">
+                                            <span id="best-score-points" class="best-score-points">-</span>
+                                            <span class="best-score-separator">•</span>
+                                            <span id="best-score-percentage" class="best-score-percentage">-</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="quiz-start-actions">
+                                <button id="start-quiz-btn" class="quiz-btn quiz-btn-primary">Comenzar Quiz</button>
+                            </div>
                         </div>
                         
                         <!-- Quiz Questions -->
@@ -133,7 +154,7 @@
                                 <div class="progress-bar">
                                     <div id="progress-fill" class="progress-fill"></div>
                                 </div>
-                                <span id="question-counter" class="question-counter">Pregunta 1 de 3</span>
+                                <span id="question-counter" class="question-counter">Pregunta 1 de 10</span>
                             </div>
                             
                             <div id="question-container" class="question-container">
@@ -155,12 +176,12 @@
                                 <div class="score-display">
                                     <div class="score-circle">
                                         <span id="final-score" class="score-number">0</span>
-                                        <span class="score-total">/ 3</span>
+                                        <span class="score-total">/ 10</span>
                                     </div>
                                 </div>
                                 <p id="score-message" class="score-message"></p>
                                 <div class="results-actions">
-                                    <button id="restart-quiz-btn" class="quiz-btn quiz-btn-primary">Intentar de Nuevo</button>
+                                    <button id="restart-quiz-btn" class="quiz-btn quiz-btn-primary">Volver al Inicio</button>
                                 </div>
                             </div>
                         </div>
@@ -169,6 +190,83 @@
             </div>
         </section>
     </main>
+
+    <!-- Name Input Modal -->
+    <div id="name-modal" class="modal-overlay" style="display: none;">
+        <div class="modal-container">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title">¡Excelente trabajo! 🎉</h3>
+                    <p class="modal-subtitle">Guarda tu puntuación en el marcador</p>
+                </div>
+                
+                <form id="name-form" class="name-form">
+                    <div class="form-group">
+                        <label for="user-name" class="form-label">Tu nombre:</label>
+                        <input 
+                            type="text" 
+                            id="user-name" 
+                            name="userName" 
+                            class="form-input" 
+                            placeholder="Escribe tu nombre aquí..."
+                            maxlength="50"
+                            required
+                            autocomplete="name"
+                        >
+                        <div id="name-error" class="form-error" style="display: none;"></div>
+                    </div>
+                    
+                    <div class="modal-actions">
+                        <button type="button" id="skip-save-btn" class="modal-btn modal-btn-secondary">
+                            Saltar
+                        </button>
+                        <button type="submit" id="save-score-btn" class="modal-btn modal-btn-primary">
+                            Guardar Puntuación
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Ranking Section -->
+    <section id="ranking" class="content-section ranking-section">
+        <div class="section-container">
+            <h2 class="section-title">🏆 Tabla de Clasificación</h2>
+            <div class="ranking-container">
+                <div class="ranking-header">
+                    <p class="ranking-description">Los mejores puntajes en el quiz del Día de Muertos</p>
+                </div>
+                
+                <div class="ranking-table-container">
+                    <table id="ranking-table" class="ranking-table">
+                        <thead>
+                            <tr>
+                                <th class="rank-col">Posición</th>
+                                <th class="name-col">Nombre</th>
+                                <th class="score-col">Puntuación</th>
+                                <th class="percentage-col">Porcentaje</th>
+                                <th class="date-col">Fecha</th>
+                            </tr>
+                        </thead>
+                        <tbody id="ranking-table-body">
+                            <!-- Ranking entries will be populated by JavaScript -->
+                        </tbody>
+                    </table>
+                    
+                    <div id="ranking-empty" class="ranking-empty" style="display: none;">
+                        <div class="empty-icon">🎯</div>
+                        <h3>¡Sé el primero!</h3>
+                        <p>Completa el quiz para aparecer en la tabla de clasificación</p>
+                    </div>
+                </div>
+                
+                <div class="ranking-actions">
+                    <button id="refresh-ranking-btn" class="quiz-btn quiz-btn-secondary">Actualizar Ranking</button>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer class="footer">
